@@ -100,11 +100,24 @@ Requires Python 3.10+ (macOS / Linux).
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-python main.py
+pip install -r terminal/requirements.txt
+python terminal/main.py
 ```
 
 **Controls:** Enter = newline · Backspace = erase · Ctrl+D or Esc = submit
+
+---
+
+## Deploy (Vercel)
+
+This is a **Vite** app in `web/`, not a Python server.
+
+1. Framework Preset: **Vite** (not Python)
+2. Root Directory: `web`  
+   — or leave Root Directory empty and use the repo-root `vercel.json`
+3. Redeploy
+
+If it still says “No python entrypoint”, delete the Vercel project and **re-import** the repo with Root Directory set to `web` from the start.
 
 ---
 
@@ -116,8 +129,9 @@ python main.py
 | `web/public/questions.json` | Katas loaded by the web app |
 | `web/public/assets/` | Splash art |
 | `questions.json` | 50 katas across 3 belts (source of truth) |
-| `main.py` / `game.py` / `ui.py` / `content.py` | Terminal game |
+| `terminal/` | Optional Python + Rich terminal game |
 | `assets/` | Reference art |
+| `vercel.json` | Forces Vite build for Vercel |
 
 > If you edit katas in the root `questions.json`, copy it to `web/public/questions.json` so the browser app stays in sync.
 

@@ -12,7 +12,7 @@ BELT_NAMES = {
     3: "Green Belt",
 }
 
-_DATA_PATH = Path(__file__).resolve().parent / "questions.json"
+_DATA_PATH = Path(__file__).resolve().parent.parent / "questions.json"
 
 
 class QuestionBank:

@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'add' that takes two numbers and returns their sum.",
+      "expected_code": "def add(a, b):\n    return a + b",
+      "hint": "Use the 'return' keyword to send the result back.",
+      "time_limit": 30
+    },
+    {
+      "id": 2,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'is_even' that returns True if a number is even, otherwise False.",
+      "expected_code": "def is_even(n):\n    return n % 2 == 0",
+      "hint": "Use the modulo operator '%' to check if divisible by 2.",
+      "time_limit": 30
+    },
+    {
+      "id": 3,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'is_odd' that returns True if a number is odd, otherwise False.",
+      "expected_code": "def is_odd(n):\n    return n % 2 != 0",
+      "hint": "Use the modulo operator '%' to check if NOT divisible by 2.",
+      "time_limit": 30
+    },
+    {
+      "id": 4,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'string_length' that returns the length of a given string.",
+      "expected_code": "def string_length(s):\n    return len(s)",
+      "hint": "Use Python's built-in 'len()' function.",
+      "time_limit": 30
+    },
+    {
+      "id": 5,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'celsius_to_fahrenheit' that converts Celsius to Fahrenheit.",
+      "expected_code": "def celsius_to_fahrenheit(c):\n    return (c * 9/5) + 32",
+      "hint": "Formula: (C * 9/5) + 32 = F",
+      "time_limit": 30
+    },
+    {
+      "id": 6,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'fahrenheit_to_celsius' that converts Fahrenheit to Celsius.",
+      "expected_code": "def fahrenheit_to_celsius(f):\n    return (f - 32) * 5/9",
+      "hint": "Formula: (F - 32) * 5/9 = C",
+      "time_limit": 30
+    },
+    {
+      "id": 7,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'square' that returns the square of a number.",
+      "expected_code": "def square(n):\n    return n ** 2",
+      "hint": "Use the exponent operator '**' or multiply n by itself.",
+      "time_limit": 30
+    },
+    {
+      "id": 8,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'cube' that returns the cube of a number.",
+      "expected_code": "def cube(n):\n    return n ** 3",
+      "hint": "Use the exponent operator '**' with 3.",
+      "time_limit": 30
+    },
+    {
+      "id": 9,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'absolute_value' that returns the absolute value of a number.",
+      "expected_code": "def absolute_value(n):\n    return abs(n)",
+      "hint": "Use Python's built-in 'abs()' function.",
+      "time_limit": 30
+    },
+    {
+      "id": 10,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'minutes_to_seconds' that converts minutes to seconds.",
+      "expected_code": "def minutes_to_seconds(m):\n    return m * 60",
+      "hint": "Multiply minutes by 60 to get seconds.",
+      "time_limit": 30
+    },
+    {
+      "id": 11,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'hours_to_minutes' that converts hours to minutes.",
+      "expected_code": "def hours_to_minutes(h):\n    return h * 60",
+      "hint": "Multiply hours by 60 to get minutes.",
+      "time_limit": 30
+    },
+    {
+      "id": 12,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'rectangle_area' that returns the area of a rectangle given length and width.",
+      "expected_code": "def rectangle_area(length, width):\n    return length * width",
+      "hint": "Area = length * width.",
+      "time_limit": 30
+    },
+    {
+      "id": 13,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'rectangle_perimeter' that returns the perimeter of a rectangle given length and width.",
+      "expected_code": "def rectangle_perimeter(length, width):\n    return 2 * (length + width)",
+      "hint": "Perimeter = 2 * (length + width).",
+      "time_limit": 30
+    },
+    {
+      "id": 14,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'circle_area' that returns the area of a circle given radius (use 3.14 for pi).",
+      "expected_code": "def circle_area(radius):\n    return 3.14 * radius ** 2",
+      "hint": "Area = pi * r^2. Use 3.14 for pi.",
+      "time_limit": 30
+    },
+    {
+      "id": 15,
+      "level": 1,
+      "topic": "functions",
+      "description": "Write a function called 'circle_circumference' that returns the circumference of a circle given radius (use 3.14 for pi).",
+      "expected_code": "def circle_circumference(radius):\n    return 2 * 3.14 * radius",
+      "hint": "Circumference = 2 * pi * r. Use 3.14 for pi.",
+      "time_limit": 30
+    },
+    {
+      "id": 16,
+      "level": 2,
+      "topic": "lists",
+      "description": "Write a function called 'sum_list' that returns the sum of all numbers in a list.",
+      "expected_code": "def sum_list(numbers):\n    return sum(numbers)",
+      "hint": "Use Python's built-in 'sum()' function.",
+      "time_limit": 30
+    },
+    {
+      "id": 17,
+      "level": 2,
+      "topic": "lists",
+      "description": "Write a function called 'largest_number' that returns the largest number in a list.",
+      "expected_code": "def largest_number(numbers):\n    return max(numbers)",
+      "hint": "Use Python's built-in 'max()' function.",
+      "time_limit": 30
+    },
+    {
+      "id": 18,
+      "level": 2,
+      "topic": "lists",
+      "description": "Write a function called 'smallest_number' that returns the smallest number in a list.",
+      "expected_code": "def smallest_number(numbers):\n    return min(numbers)",
+      "hint": "Use Python's built-in 'min()' function.",
+      "time_limit": 30
+    },
+    {
+      "id": 19,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'count_char' that counts how many times a character appears in a string.",
+      "expected_code": "def count_char(s, char):\n    return s.count(char)",
+      "hint": "Use Python's built-in 'count()' method on strings.",
+      "time_limit": 30
+    },
+    {
+      "id": 20,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'reverse_string' that returns the reverse of a string.",
+      "expected_code": "def reverse_string(s):\n    return s[::-1]",
+      "hint": "Use slicing with step -1: s[::-1].",
+      "time_limit": 30
+    },
+    {
+      "id": 21,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'is_palindrome' that returns True if a string is a palindrome (reads the same forwards and backwards).",
+      "expected_code": "def is_palindrome(s):\n    return s == s[::-1]",
+      "hint": "Check if the string equals its reverse.",
+      "time_limit": 30
+    },
+    {
+      "id": 22,
+      "level": 2,
+      "topic": "loops",
+      "description": "Write a function called 'fizzbuzz' that prints numbers 1 to 100. For multiples of 3 print 'Fizz', multiples of 5 print 'Buzz', multiples of both print 'FizzBuzz'.",
+      "expected_code": "def fizzbuzz():\n    for i in range(1, 101):\n        if i % 3 == 0 and i % 5 == 0:\n            print('FizzBuzz')\n        elif i % 3 == 0:\n            print('Fizz')\n        elif i % 5 == 0:\n            print('Buzz')\n        else:\n            print(i)",
+      "hint": "Use 'for' loop with 'range(1, 101)'. Check divisibility with '%'.",
+      "time_limit": 45
+    },
+    {
+      "id": 23,
+      "level": 2,
+      "topic": "loops",
+      "description": "Write a function called 'factorial' that returns the factorial of a number (e.g., 5! = 5*4*3*2*1 = 120).",
+      "expected_code": "def factorial(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result",
+      "hint": "Multiply all numbers from 1 to n together.",
+      "time_limit": 30
+    },
+    {
+      "id": 24,
+      "level": 2,
+      "topic": "conditionals",
+      "description": "Write a function called 'is_prime' that returns True if a number is prime, otherwise False.",
+      "expected_code": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+      "hint": "Check divisibility from 2 up to the square root of n.",
+      "time_limit": 45
+    },
+    {
+      "id": 25,
+      "level": 2,
+      "topic": "loops",
+      "description": "Write a function called 'print_primes' that prints all prime numbers up to n.",
+      "expected_code": "def print_primes(n):\n    for num in range(2, n + 1):\n        is_prime = True\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                is_prime = False\n                break\n        if is_prime:\n            print(num)",
+      "hint": "Use a nested loop. For each number, check if it's prime.",
+      "time_limit": 45
+    },
+    {
+      "id": 26,
+      "level": 2,
+      "topic": "lists",
+      "description": "Write a function called 'sum_even' that returns the sum of all even numbers in a list.",
+      "expected_code": "def sum_even(numbers):\n    return sum(n for n in numbers if n % 2 == 0)",
+      "hint": "Use a generator expression with 'sum()' and an 'if' condition.",
+      "time_limit": 30
+    },
+    {
+      "id": 27,
+      "level": 2,
+      "topic": "lists",
+      "description": "Write a function called 'remove_duplicates' that returns a list with duplicates removed.",
+      "expected_code": "def remove_duplicates(lst):\n    return list(set(lst))",
+      "hint": "Use 'set()' to remove duplicates, then convert back to a list.",
+      "time_limit": 30
+    },
+    {
+      "id": 28,
+      "level": 2,
+      "topic": "lists",
+      "description": "Write a function called 'average_list' that returns the average of all numbers in a list.",
+      "expected_code": "def average_list(numbers):\n    return sum(numbers) / len(numbers)",
+      "hint": "Average = sum / count.",
+      "time_limit": 30
+    },
+    {
+      "id": 29,
+      "level": 2,
+      "topic": "lists",
+      "description": "Write a function called 'multiply_list' that returns the product (multiplication) of all numbers in a list.",
+      "expected_code": "def multiply_list(numbers):\n    result = 1\n    for n in numbers:\n        result *= n\n    return result",
+      "hint": "Initialize result = 1, then multiply each number.",
+      "time_limit": 30
+    },
+    {
+      "id": 30,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'count_vowels' that returns the number of vowels (a, e, i, o, u) in a string.",
+      "expected_code": "def count_vowels(s):\n    vowels = 'aeiouAEIOU'\n    return sum(1 for char in s if char in vowels)",
+      "hint": "Check each character against a string of vowels.",
+      "time_limit": 30
+    },
+    {
+      "id": 31,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'is_digit_string' that returns True if a string contains only digits.",
+      "expected_code": "def is_digit_string(s):\n    return s.isdigit()",
+      "hint": "Use Python's built-in 'isdigit()' method.",
+      "time_limit": 30
+    },
+    {
+      "id": 32,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'capitalize_words' that capitalizes the first letter of each word in a sentence.",
+      "expected_code": "def capitalize_words(sentence):\n    return ' '.join(word.capitalize() for word in sentence.split())",
+      "hint": "Use 'split()' to break into words, 'capitalize()' each, then 'join()'.",
+      "time_limit": 30
+    },
+    {
+      "id": 33,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'longest_word' that returns the longest word in a sentence.",
+      "expected_code": "def longest_word(sentence):\n    words = sentence.split()\n    return max(words, key=len)",
+      "hint": "Use 'max()' with the 'key=len' parameter.",
+      "time_limit": 30
+    },
+    {
+      "id": 34,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'count_words' that returns the number of words in a sentence.",
+      "expected_code": "def count_words(sentence):\n    return len(sentence.split())",
+      "hint": "Use 'split()' and count the resulting list.",
+      "time_limit": 30
+    },
+    {
+      "id": 35,
+      "level": 2,
+      "topic": "strings",
+      "description": "Write a function called 'is_anagram' that returns True if two strings are anagrams (contain the same letters in any order).",
+      "expected_code": "def is_anagram(s1, s2):\n    return sorted(s1) == sorted(s2)",
+      "hint": "Sort both strings and compare.",
+      "time_limit": 30
+    },
+    {
+      "id": 36,
+      "level": 3,
+      "topic": "dictionaries",
+      "description": "Write a function called 'word_frequency' that returns a dictionary with the count of each word in a sentence.",
+      "expected_code": "def word_frequency(sentence):\n    words = sentence.split()\n    freq = {}\n    for word in words:\n        freq[word] = freq.get(word, 0) + 1\n    return freq",
+      "hint": "Use 'split()' and a dictionary. Use 'get()' to handle missing keys.",
+      "time_limit": 45
+    },
+    {
+      "id": 37,
+      "level": 3,
+      "topic": "list_comprehensions",
+      "description": "Write a function called 'square_list' that returns a list of squares of each number using a list comprehension.",
+      "expected_code": "def square_list(numbers):\n    return [n ** 2 for n in numbers]",
+      "hint": "Use list comprehension syntax: [expression for item in list].",
+      "time_limit": 30
+    },
+    {
+      "id": 38,
+      "level": 3,
+      "topic": "dictionaries",
+      "description": "Write a function called 'merge_dicts' that returns a merged dictionary from two dictionaries.",
+      "expected_code": "def merge_dicts(dict1, dict2):\n    merged = dict1.copy()\n    merged.update(dict2)\n    return merged",
+      "hint": "Use 'copy()' and 'update()' or use the '**' unpacking operator.",
+      "time_limit": 30
+    },
+    {
+      "id": 39,
+      "level": 3,
+      "topic": "lists",
+      "description": "Write a function called 'most_common' that returns the most common element in a list.",
+      "expected_code": "def most_common(lst):\n    return max(set(lst), key=lst.count)",
+      "hint": "Use 'set()' to get unique elements, then 'max()' with 'key=lst.count'.",
+      "time_limit": 30
+    },
+    {
+      "id": 40,
+      "level": 3,
+      "topic": "dictionaries",
+      "description": "Write a function called 'invert_dict' that inverts a dictionary (keys become values, values become keys).",
+      "expected_code": "def invert_dict(d):\n    return {v: k for k, v in d.items()}",
+      "hint": "Use dictionary comprehension: {v: k for k, v in d.items()}.",
+      "time_limit": 30
+    },
+    {
+      "id": 41,
+      "level": 3,
+      "topic": "lists",
+      "description": "Write a function called 'sort_tuples' that sorts a list of tuples by the second element.",
+      "expected_code": "def sort_tuples(tuples_list):\n    return sorted(tuples_list, key=lambda x: x[1])",
+      "hint": "Use 'sorted()' with a lambda function as the key.",
+      "time_limit": 30
+    },
+    {
+      "id": 42,
+      "level": 3,
+      "topic": "lists",
+      "description": "Write a function called 'find_pairs' that finds all pairs in a list that sum to a target.",
+      "expected_code": "def find_pairs(numbers, target):\n    pairs = []\n    seen = set()\n    for num in numbers:\n        complement = target - num\n        if complement in seen:\n            pairs.append((complement, num))\n        seen.add(num)\n    return pairs",
+      "hint": "Use a set to track numbers you've seen. For each number, check if (target - num) is in the set.",
+      "time_limit": 45
+    },
+    {
+      "id": 43,
+      "level": 3,
+      "topic": "dictionaries",
+      "description": "Write a function called 'dict_from_lists' that creates a dictionary from two lists (keys and values).",
+      "expected_code": "def dict_from_lists(keys, values):\n    return dict(zip(keys, values))",
+      "hint": "Use Python's built-in 'zip()' and 'dict()' functions.",
+      "time_limit": 30
+    },
+    {
+      "id": 44,
+      "level": 3,
+      "topic": "list_comprehensions",
+      "description": "Write a function called 'filter_even' that returns a list of even numbers using a list comprehension.",
+      "expected_code": "def filter_even(numbers):\n    return [n for n in numbers if n % 2 == 0]",
+      "hint": "Use list comprehension with an 'if' condition.",
+      "time_limit": 30
+    },
+    {
+      "id": 45,
+      "level": 3,
+      "topic": "lists",
+      "description": "Write a function called 'flatten_list' that flattens a nested list (e.g., [[1,2],[3,4]] -> [1,2,3,4]).",
+      "expected_code": "def flatten_list(nested):\n    return [item for sublist in nested for item in sublist]",
+      "hint": "Use nested list comprehension: [item for sublist in nested for item in sublist].",
+      "time_limit": 30
+    },
+    {
+      "id": 46,
+      "level": 3,
+      "topic": "strings",
+      "description": "Write a function called 'balanced_parentheses' that returns True if a string has balanced parentheses.",
+      "expected_code": "def balanced_parentheses(s):\n    count = 0\n    for char in s:\n        if char == '(':\n            count += 1\n        elif char == ')':\n            count -= 1\n        if count < 0:\n            return False\n    return count == 0",
+      "hint": "Use a counter. Increment for '(', decrement for ')'. If it goes negative, it's unbalanced.",
+      "time_limit": 45
+    },
+    {
+      "id": 47,
+      "level": 3,
+      "topic": "lists",
+      "description": "Write a function called 'list_intersection' that returns the intersection of two lists.",
+      "expected_code": "def list_intersection(list1, list2):\n    return list(set(list1) & set(list2))",
+      "hint": "Convert both to sets and use the '&' operator.",
+      "time_limit": 30
+    },
+    {
+      "id": 48,
+      "level": 3,
+      "topic": "lists",
+      "description": "Write a function called 'list_union' that returns the union of two lists.",
+      "expected_code": "def list_union(list1, list2):\n    return list(set(list1) | set(list2))",
+      "hint": "Convert both to sets and use the '|' operator.",
+      "time_limit": 30
+    },
+    {
+      "id": 49,
+      "level": 3,
+      "topic": "lists",
+      "description": "Write a function called 'rotate_list' that rotates a list to the right by k steps.",
+      "expected_code": "def rotate_list(lst, k):\n    if not lst:\n        return lst\n    k = k % len(lst)\n    return lst[-k:] + lst[:-k]",
+      "hint": "Use slicing: take the last k elements and put them at the front.",
+      "time_limit": 30
+    },
+    {
+      "id": 50,
+      "level": 3,
+      "topic": "data_structures",
+      "description": "Write a function called 'SimpleQueue' that implements a queue using a list with enqueue and dequeue methods.",
+      "expected_code": "class SimpleQueue:\n    def __init__(self):\n        self.items = []\n    \n    def enqueue(self, item):\n        self.items.append(item)\n    \n    def dequeue(self):\n        if self.is_empty():\n            return None\n        return self.items.pop(0)\n    \n    def is_empty(self):\n        return len(self.items) == 0",
+      "hint": "Use a list. 'enqueue' appends, 'dequeue' pops from index 0.",
+      "time_limit": 45
+    }
+  ]
+}

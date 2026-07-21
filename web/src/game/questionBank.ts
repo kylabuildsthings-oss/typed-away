@@ -4,8 +4,6 @@ import { BELT_NAMES } from "./types";
 export class QuestionBank {
   /** Canonical list in file order — never mutated. */
   private readonly allQuestions: Question[] = [];
-  /** Active order for the current run (shuffled). */
-  private questions: Question[] = [];
   private byLevel: Map<number, Question[]> = new Map();
   private cursors: Map<number, number> = new Map();
 
@@ -52,8 +50,6 @@ export class QuestionBank {
       this.byLevel.set(level, this.shuffleArray([...list]));
       this.cursors.set(level, 0);
     }
-
-    this.questions = [...this.byLevel.values()].flat();
   }
 
   getTotalQuestions(): number {

@@ -244,6 +244,7 @@ export function useGame(): GameView {
         expected: q.expected_code,
         actual: playerCode,
         elapsed,
+        hint: q.hint,
       });
       setScreen("verdict");
     },

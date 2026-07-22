@@ -1,5 +1,6 @@
 import type { VerdictState } from "../game/types";
 import type { BeltRank } from "../game/types";
+import { coachingTips } from "../game/coaching";
 import { Scoreboard } from "./Scoreboard";
 
 interface VerdictScreenProps {
@@ -23,6 +24,10 @@ export function VerdictScreen({
   beltRank,
   onContinue,
 }: VerdictScreenProps) {
+  const tips = verdict.isCorrect
+    ? []
+    : coachingTips(verdict.actual, verdict.expected, verdict.hint);
+
   return (
     <div className="screen verdict-screen">
       <div className="wood-backdrop" />
@@ -37,14 +42,13 @@ export function VerdictScreen({
         />
 
         <div className="scroll-panel animate-unfurl">
+          <p className="sensei-label">Sensei</p>
           <h2
-            className={`verdict-title ${
-              verdict.isCorrect ? "verdict-title--ok" : "verdict-title--bad"
+            className={`sensei-verdict ${
+              verdict.isCorrect ? "sensei-verdict--ok" : "sensei-verdict--bad"
             }`}
           >
-            {verdict.isCorrect
-              ? "✔ Sensei's Verdict: Kata Mastered!"
-              : "✘ Sensei's Verdict: Loss of Focus"}
+            {verdict.isCorrect ? "Kata Mastered!" : "Loss of Focus"}
           </h2>
 
           <div className="verdict-meta">
@@ -54,6 +58,17 @@ export function VerdictScreen({
             </span>
             <span>{verdict.elapsed.toFixed(1)}s</span>
           </div>
+
+          {tips.length > 0 && (
+            <aside className="sensei-coach" aria-label="Sensei coaching">
+              <p className="sensei-coach__label">Why it missed</p>
+              {tips.map((tip) => (
+                <p key={tip} className="sensei-coach__tip">
+                  {tip}
+                </p>
+              ))}
+            </aside>
+          )}
 
           <div className="compare-grid">
             <div className="compare-col">

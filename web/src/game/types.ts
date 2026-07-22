@@ -35,6 +35,8 @@ export interface VerdictState {
   expected: string;
   actual: string;
   elapsed: number;
+  /** Optional kata hint used for coaching when wrong. */
+  hint?: string;
 }
 
 export const BELT_NAMES: Record<BeltRank, string> = {

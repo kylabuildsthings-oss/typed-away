@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import type { Question } from "../game/types";
 import type { BeltRank } from "../game/types";
+import { CodeEditor } from "./CodeEditor";
 import { Scoreboard } from "./Scoreboard";
 
 interface ChallengeScreenProps {
@@ -24,19 +25,14 @@ export function ChallengeScreen({
   beltRank,
   onSubmit,
 }: ChallengeScreenProps) {
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const codeRef = useRef("");
+  const [code, setCode] = useState("");
 
   useEffect(() => {
-    codeRef.current = "";
-    if (textareaRef.current) {
-      textareaRef.current.value = "";
-      textareaRef.current.focus();
-    }
+    setCode("");
   }, [question.id]);
 
   const handleSubmit = () => {
-    onSubmit(codeRef.current);
+    onSubmit(code);
   };
 
   return (
@@ -68,25 +64,16 @@ export function ChallengeScreen({
 
               <section className="code-pane" aria-label="Your code">
                 <h2 className="pane-title">✍ Your Scroll</h2>
-                <textarea
-                  ref={textareaRef}
-                  className="code-input"
-                  spellCheck={false}
-                  autoCapitalize="off"
-                  autoCorrect="off"
-                  placeholder="# Type your solution here…"
-                  aria-label="Code input"
-                  onChange={(e) => {
-                    codeRef.current = e.target.value;
-                  }}
-                  onKeyDown={(e) => {
-                    if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
-                      e.preventDefault();
-                      handleSubmit();
-                    }
-                  }}
+                <CodeEditor
+                  key={question.id}
+                  value={code}
+                  onChange={setCode}
+                  onSubmit={handleSubmit}
                 />
-                <p className="code-hint">Ctrl+Enter / ⌘+Enter to submit</p>
+                <p className="code-hint">
+                  Tab indent · Shift+Tab outdent · Enter keeps indent · Ctrl/⌘+Enter
+                  submit
+                </p>
               </section>
             </div>
           </div>
